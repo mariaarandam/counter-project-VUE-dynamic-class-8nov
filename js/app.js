@@ -8,8 +8,23 @@ import {
 createApp({
   setup() {
     const message = ref("Hello Vue!");
+    const counter = ref(0);
+
+    const addCount = () => {
+      console.log("Suma 1");
+      counter.value++;
+    }
+
+    const lowerCount = () => {
+      console.log("Suma 1");
+      counter.value--;
+    }
+
     return {
-      message,
+      counter,
+      addCount,
+      lowerCount
+
     };
   },
 }).mount("#app");
