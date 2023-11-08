@@ -16,14 +16,25 @@ createApp({
     }
 
     const lowerCount = () => {
-      console.log("Suma 1");
+      console.log("Resta 1");
       counter.value--;
+    }
+
+    const getColorCount = () => {
+      if (counter.value >= 1){
+        return 'green'
+      } else if (counter.value <= -1){
+      return 'red'
+      } else {
+        return 'grey'
+      }
     }
 
     return {
       counter,
       addCount,
-      lowerCount
+      lowerCount,
+      getColorCount,
 
     };
   },
